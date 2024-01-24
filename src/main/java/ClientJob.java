@@ -97,7 +97,7 @@ public class ClientJob implements Job {
         try {
             logger.info("Filtering keys in hashmap with regex " + regex);
             Pattern pattern = Pattern.compile(regex);
-            hashMap.entrySet().removeIf(mapEntry -> pattern.matcher(mapEntry.getKey()).matches());
+            hashMap.entrySet().removeIf(mapEntry -> !pattern.matcher(mapEntry.getKey()).matches());
             logger.info("Filtered hashmap size:" + hashMap.size());
         } catch (Exception e) {
             logger.severe("Error occurred while filtering hashMap");
