@@ -34,7 +34,7 @@ server.request.contentType=application/json
 
 
 To build and run this application follow the below steps
-1. Pull this repository to your local machine
+1. Clone this repository to your local machine
 2. Open the terminal/command prompt and change the path to the recently downloaded repo folder
 3. Run the following command to build the application
 	mvn package
